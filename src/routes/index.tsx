@@ -102,7 +102,7 @@ function Contact() {
               <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
                 {c.cta} <ArrowRight className="w-4 h-4" />
               </div>
-            </a>
+            </Link>
           );
         })}
       </div>
@@ -126,7 +126,7 @@ function FloatingContact() {
             className="w-12 h-12 rounded-full flex items-center justify-center text-white shadow-soft hover:scale-110 transition-transform"
             style={{ background: i.bg }}>
             <Icon className="w-5 h-5" />
-          </a>
+          </Link>
         );
       })}
     </div>
@@ -153,7 +153,7 @@ function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
           {navItems.map(i => (
-            <a key={i.label} href={i.href} className="hover:text-foreground transition-colors">{i.label}</a>
+            <a key={i.label} href={i.href} className="hover:text-foreground transition-colors">{i.label}</Link>
           ))}
           {isAuthed && (
             <button onClick={() => signOut().then(() => window.location.reload())} className="hover:text-foreground transition-colors">Logout</button>
@@ -174,7 +174,7 @@ function Header() {
               {navItems.map(i => (
                 <a key={i.label} href={i.href} className="block px-5 py-4 text-lg font-medium text-foreground/90 hover:bg-muted/60 rounded-lg transition-colors">
                   {i.label}
-                </a>
+                </Link>
               ))}
               {isAuthed && (
                 <button onClick={() => signOut().then(() => window.location.reload())} className="w-full text-left block px-5 py-4 text-lg font-medium text-destructive hover:bg-muted/60 rounded-lg transition-colors">
@@ -185,7 +185,7 @@ function Header() {
             <div className="p-5 border-t border-border/60">
               <a href="/products" className="flex items-center justify-center w-full rounded-full bg-cta-gradient text-primary-foreground px-6 py-3.5 text-base font-semibold shadow-soft hover:scale-[1.02] transition-transform">
                 Shop Now
-              </a>
+              </Link>
             </div>
           </SheetContent>
         </Sheet>
@@ -213,10 +213,10 @@ function Hero() {
             <a href="/products" className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-7 py-3.5 font-semibold shadow-soft hover:bg-foreground/90 transition-all">
               Start Shopping
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
             <a href="#pricing" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 font-semibold hover:bg-secondary transition-colors">
               View Pricing
-            </a>
+            </Link>
           </div>
           <div className="mt-12 pt-8 border-t border-border grid grid-cols-3 gap-6 max-w-lg">
             {[["1M+", "Trusted users"], ["24/7", "Instant delivery"], ["100%", "Secure accounts"]].map(([v, l]) => (
@@ -282,7 +282,7 @@ function PlatformGrid() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </div>
           <div className="text-sm font-semibold text-primary">+ Many more</div>
-        </a>
+        </Link>
       </div>
       <div className="mt-8 flex flex-col items-center gap-2 text-muted-foreground">
         <p className="text-sm">Scroll to explore everything we offer</p>
@@ -389,7 +389,7 @@ function PopularAccounts() {
         </div>
         <a href="/products" className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
           View all products <ArrowRight className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
       <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {items.map(p => {
@@ -405,7 +405,7 @@ function PopularAccounts() {
               <p className="text-sm text-muted-foreground mt-1">Verified · Instant delivery</p>
               <a href="/products" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
                 View details <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           );
         })}
@@ -595,7 +595,7 @@ function Footer() {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 shrink-0 text-primary" />
-              <a href={CONTACTS.emailHref} className="hover:text-foreground">{CONTACTS.email}</a>
+              <a href={CONTACTS.emailHref} className="hover:text-foreground">{CONTACTS.email}</Link>
             </div>
           </address>
         </div>
@@ -603,16 +603,16 @@ function Footer() {
           <div className="font-semibold mb-3">Shop</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
             {["Facebook", "Instagram", "Gmail", "TikTok", "VPN"].map(l => (
-              <li key={l}><a href="/products" className="hover:text-foreground">{l}</a></li>
+              <li key={l}><a href="/products" className="hover:text-foreground">{l}</Link></li>
             ))}
           </ul>
         </div>
         <div>
           <div className="font-semibold mb-3">Connect</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href={CONTACTS.whatsappMessage} target="_blank" rel="noreferrer" className="hover:text-foreground inline-flex items-center gap-2"><MessageCircle className="w-4 h-4" /> WhatsApp</a></li>
-            <li><a href={CONTACTS.telegramChannel} target="_blank" rel="noreferrer" className="hover:text-foreground inline-flex items-center gap-2"><Send className="w-4 h-4" /> Telegram</a></li>
-            <li><a href={CONTACTS.emailHref} className="hover:text-foreground inline-flex items-center gap-2"><Mail className="w-4 h-4" /> Email</a></li>
+            <li><a href={CONTACTS.whatsappMessage} target="_blank" rel="noreferrer" className="hover:text-foreground inline-flex items-center gap-2"><MessageCircle className="w-4 h-4" /> WhatsApp</Link></li>
+            <li><a href={CONTACTS.telegramChannel} target="_blank" rel="noreferrer" className="hover:text-foreground inline-flex items-center gap-2"><Send className="w-4 h-4" /> Telegram</Link></li>
+            <li><a href={CONTACTS.emailHref} className="hover:text-foreground inline-flex items-center gap-2"><Mail className="w-4 h-4" /> Email</Link></li>
           </ul>
         </div>
       </div>
@@ -620,8 +620,8 @@ function Footer() {
         <div className="container mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} KAMZYBOT'S MEDIA. All rights reserved.</div>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-foreground">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground">Terms of Service</a>
+            <a href="#" className="hover:text-foreground">Privacy Policy</Link>
+            <a href="#" className="hover:text-foreground">Terms of Service</Link>
           </div>
         </div>
       </div>
