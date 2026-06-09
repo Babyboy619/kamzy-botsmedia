@@ -102,7 +102,7 @@ function Contact() {
               <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
                 {c.cta} <ArrowRight className="w-4 h-4" />
               </div>
-            </Link>
+            </a>
           );
         })}
       </div>
@@ -126,7 +126,7 @@ function FloatingContact() {
             className="w-12 h-12 rounded-full flex items-center justify-center text-white shadow-soft hover:scale-110 transition-transform"
             style={{ background: i.bg }}>
             <Icon className="w-5 h-5" />
-          </Link>
+          </a>
         );
       })}
     </div>
@@ -216,7 +216,7 @@ function Hero() {
             </Link>
             <a href="/products" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 font-semibold hover:bg-secondary transition-colors">
               View Pricing
-            </Link>
+            </a>
           </div>
           <div className="mt-12 pt-8 border-t border-border grid grid-cols-3 gap-6 max-w-lg">
             {[["1M+", "Trusted users"], ["24/7", "Instant delivery"], ["100%", "Secure accounts"]].map(([v, l]) => (
@@ -282,7 +282,7 @@ function PlatformGrid() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </div>
           <div className="text-sm font-semibold text-primary">+ Many more</div>
-        </Link>
+        </a>
       </div>
       <div className="mt-8 flex flex-col items-center gap-2 text-muted-foreground">
         <p className="text-sm">Scroll to explore everything we offer</p>
@@ -595,7 +595,7 @@ function Footer() {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 shrink-0 text-primary" />
-              <a href={CONTACTS.emailHref} className="hover:text-foreground">{CONTACTS.email}</Link>
+              <a href={CONTACTS.emailHref} className="hover:text-foreground">{CONTACTS.email}</a>
             </div>
           </address>
         </div>
@@ -610,9 +610,9 @@ function Footer() {
         <div>
           <div className="font-semibold mb-3">Connect</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href={CONTACTS.whatsappMessage} target="_blank" rel="noreferrer" className="hover:text-foreground inline-flex items-center gap-2"><MessageCircle className="w-4 h-4" /> WhatsApp</Link></li>
-            <li><a href={CONTACTS.telegramChannel} target="_blank" rel="noreferrer" className="hover:text-foreground inline-flex items-center gap-2"><Send className="w-4 h-4" /> Telegram</Link></li>
-            <li><a href={CONTACTS.emailHref} className="hover:text-foreground inline-flex items-center gap-2"><Mail className="w-4 h-4" /> Email</Link></li>
+            <li><a href={CONTACTS.whatsappMessage} target="_blank" rel="noreferrer" className="hover:text-foreground inline-flex items-center gap-2"><MessageCircle className="w-4 h-4" /> WhatsApp</a></li>
+            <li><a href={CONTACTS.telegramChannel} target="_blank" rel="noreferrer" className="hover:text-foreground inline-flex items-center gap-2"><Send className="w-4 h-4" /> Telegram</a></li>
+            <li><a href={CONTACTS.emailHref} className="hover:text-foreground inline-flex items-center gap-2"><Mail className="w-4 h-4" /> Email</a></li>
           </ul>
         </div>
       </div>
@@ -620,8 +620,8 @@ function Footer() {
         <div className="container mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} KAMZYBOT'S MEDIA. All rights reserved.</div>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-foreground">Privacy Policy</Link>
-            <a href="#" className="hover:text-foreground">Terms of Service</Link>
+            <a href="#" className="hover:text-foreground">Privacy Policy</a>
+            <a href="#" className="hover:text-foreground">Terms of Service</a>
           </div>
         </div>
       </div>
