@@ -153,7 +153,7 @@ function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
           {navItems.map(i => (
-            <a key={i.label} href={i.href} className="hover:text-foreground transition-colors">{i.label}</Link>
+            <Link key={i.label} to={i.href} className="hover:text-foreground transition-colors">{i.label}</Link>
           ))}
           {isAuthed && (
             <button onClick={() => signOut().then(() => window.location.reload())} className="hover:text-foreground transition-colors">Logout</button>
@@ -172,7 +172,7 @@ function Header() {
             </SheetHeader>
             <nav className="flex-1 overflow-y-auto px-2 py-4">
               {navItems.map(i => (
-                <a key={i.label} href={i.href} className="block px-5 py-4 text-lg font-medium text-foreground/90 hover:bg-muted/60 rounded-lg transition-colors">
+                <Link key={i.label} to={i.href} className="block px-5 py-4 text-lg font-medium text-foreground/90 hover:bg-muted/60 rounded-lg transition-colors">
                   {i.label}
                 </Link>
               ))}
@@ -214,7 +214,7 @@ function Hero() {
               Start Shopping
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <a href="#pricing" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 font-semibold hover:bg-secondary transition-colors">
+            <a href="/products" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 font-semibold hover:bg-secondary transition-colors">
               View Pricing
             </Link>
           </div>
