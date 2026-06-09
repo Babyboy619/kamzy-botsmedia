@@ -183,7 +183,7 @@ function Header() {
               )}
             </nav>
             <div className="p-5 border-t border-border/60">
-              <a href="/products" className="flex items-center justify-center w-full rounded-full bg-cta-gradient text-primary-foreground px-6 py-3.5 text-base font-semibold shadow-soft hover:scale-[1.02] transition-transform">
+              <Link to="/products" className="flex items-center justify-center w-full rounded-full bg-cta-gradient text-primary-foreground px-6 py-3.5 text-base font-semibold shadow-soft hover:scale-[1.02] transition-transform">
                 Shop Now
               </Link>
             </div>
@@ -210,7 +210,7 @@ function Hero() {
             KAMZYBOT'S MEDIA delivers secure, battle-tested accounts designed to scale your business or personal reach instantly.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="/products" className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-7 py-3.5 font-semibold shadow-soft hover:bg-foreground/90 transition-all">
+            <Link to="/products" className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-7 py-3.5 font-semibold shadow-soft hover:bg-foreground/90 transition-all">
               Start Shopping
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -387,7 +387,7 @@ function PopularAccounts() {
           <h2 className="mt-3 font-display font-bold text-4xl md:text-5xl max-w-xl">Popular Digital Accounts</h2>
           <p className="mt-3 text-muted-foreground max-w-lg">Choose from our wide selection of verified accounts across major platforms.</p>
         </div>
-        <a href="/products" className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
+        <Link to="/products" className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
           View all products <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
@@ -403,7 +403,7 @@ function PopularAccounts() {
               </div>
               <h3 className="mt-5 text-lg font-bold">{p.name} Accounts</h3>
               <p className="text-sm text-muted-foreground mt-1">Verified · Instant delivery</p>
-              <a href="/products" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
+              <Link to="/products" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
                 View details <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -603,7 +603,7 @@ function Footer() {
           <div className="font-semibold mb-3">Shop</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
             {["Facebook", "Instagram", "Gmail", "TikTok", "VPN"].map(l => (
-              <li key={l}><a href="/products" className="hover:text-foreground">{l}</Link></li>
+              <li key={l}><Link to="/products" className="hover:text-foreground">{l}</Link></li>
             ))}
           </ul>
         </div>
