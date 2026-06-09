@@ -1,0 +1,5 @@
+run = "npm run dev"
+
+[[ports]]
+localPort = 5174
+externalPort = 80
